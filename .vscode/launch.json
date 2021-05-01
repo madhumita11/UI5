@@ -1,0 +1,27 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run ManageProducts-UI5Module",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/manageproducts-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/nsUI5Module/index.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "${workspaceFolder}/UI5Module",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/ManageProducts/UI5Module\"}"
+      },
+      "envFile": "${workspaceFolder}/UI5Module/.env2",
+      "preLaunchTask": "Build ManageProducts"
+    }
+  ]
+}
